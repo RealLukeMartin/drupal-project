@@ -56,7 +56,8 @@
         "drupal/paragraphs": "8.1.0-rc4",
         "drupal/token": "8.1.0-alpha2",
         "drupal/s3fs": "8.2.*@dev",
-        "drupal/special_menu_items": "8.1.*@dev"
+        "drupal/special_menu_items": "8.1.*@dev",
+        "ext-gd": "*"
     },
     "require-dev": {
         "behat/mink": "~1.6",
