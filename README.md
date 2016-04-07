@@ -13,3 +13,17 @@ Then after cd in to the new site directory and run:
 ```
 composer install
 ```
+
+## Cluster Usage
+
+Run: `./derp.sh`
+
+Assign environment variables:
+
+`MYSQL_DATABASE_NAME`
+`MYSQL_DATABASE_USER`
+`MYSQL_DATABASE_PASSWORD`
+`MYSQL_DATABASE_HOST`
+
+
+Deploy!
