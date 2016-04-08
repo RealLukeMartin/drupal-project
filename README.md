@@ -17,7 +17,9 @@ composer install
 ## Cluster Usage
 
 Run: `./init.sh [commit message] [branch]`
+
 To initially pull in the database so configuration sync will work:
+
 `./init.sh db`
 
 Assign environment variables:
