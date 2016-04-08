@@ -7,7 +7,7 @@ if [ "$1" = "deploy" ]; then
   cp example.settings.local.php ./web/sites/default/settings.local.php
   printf "if (file_exists(__DIR__ . '/settings.local.php')) {" >> ./web/sites/default/settings.php
   printf "include __DIR__ . '/settings.local.php';" >> ./web/sites/default/settings.php
-  printf "}" >> ./web/sites/default/settings.php >> ./web/sites/default/settings.php
+  printf "}" >> ./web/sites/default/settings.php
   git add .
   git commit -m 'init remote'
   git push deis $2
