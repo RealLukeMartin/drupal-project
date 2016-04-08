@@ -5,22 +5,14 @@
 ## Usage
 
 If you need to create a new site using our houston platform. just run this command:
-```
-git clone https://github.com/poetic/drupal-project.git SITE_NAME
-```
 
-Then after cd in to the new site directory and run: 
-```
-composer install
-```
+`./init.sh`
 
 ## Cluster Usage
 
-Run: `./init.sh [commit message] [branch]`
+Initialize remote cluster environment: 
 
-To initially pull in the database so configuration sync will work:
-
-`./init.sh db`
+`./init.sh deploy [commit message] [branch]`
 
 Assign environment variables:
 
@@ -28,6 +20,3 @@ Assign environment variables:
 `MYSQL_DATABASE_USER`
 `MYSQL_DATABASE_PASSWORD`
 `MYSQL_DATABASE_HOST`
-
-
-Deploy!
