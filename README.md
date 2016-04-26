@@ -18,6 +18,13 @@ Assign environment variables in a .env file:
 `MYSQL_DATABASE_USER`
 `MYSQL_DATABASE_PASSWORD`
 `MYSQL_DATABASE_HOST`
+`S3_KEY`
+`S3_SECRET`
+`S3_REGION`
+`S3_BUCKETNAME`
+`S3_PREFIX`
+`S3_CNAME`
+
 
 Create remote for site to push to: `deis create [sitename]`
 
