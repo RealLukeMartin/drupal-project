@@ -1,10 +1,9 @@
 # Composer template for Drupal projects
 
-[![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
-
 ## Usage
 
 If you need to create a new site using our houston platform. just run this command:
+<<<<<<< HEAD
 
 `./init.sh`
 
@@ -41,4 +40,14 @@ After running the init.sh script to initialize, all future deploys will use
 `git push deis [branch]`
 
 Sync config from local to remote with Drupal's Configuration Synchronization
+
+=======
+```
+git clone https://github.com/poetic/drupal-project.git SITE_NAME
+```
+
+Then after cd in to the new site directory and run: 
+```
+composer install
+```
 
