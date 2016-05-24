@@ -4,7 +4,7 @@ if [ "$1" = "deploy" ]; then
   # Only run this to get site up to cluster initially, after the intial deploy just run "git push deis master" 
   git checkout $2
   chmod -R 775 ./web/sites/default/
-  cp example.settings.local.php ./web/sites/default/settings.local.php
+  cp ./settings/prod.settings.local.php ./web/sites/default/settings.local.php
   printf "if (file_exists(__DIR__ . '/settings.local.php')) {" >> ./web/sites/default/settings.php
   printf "include __DIR__ . '/settings.local.php';" >> ./web/sites/default/settings.php
   printf "}" >> ./web/sites/default/settings.php
@@ -20,5 +20,8 @@ if [ "$1" = "deploy" ]; then
 else 
   composer install
   composer update
+  cp ./settings/local.settings.local.php ./web/sites/default/settings.local.php
+  cp ./settings/example.settings.php ./web/sites/default/settings.php
+  chmod 644 ./web/sites/default/settings.php
 
 fi
