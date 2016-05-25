@@ -1,33 +1,29 @@
 # Composer template for Drupal projects
 
-## Usage
+## Local Usage
 
-If you need to create a new site using our houston platform. just run this command:
-<<<<<<< HEAD
+#####
+
 
 `./init.sh`
 
 ## Cluster Usage
+Copy the .env.example file to .env and assign the environment variables specific to your project, they include:
 
-Initialize remote cluster environment: 
-
-Assign environment variables in a .env file:
-
-`MYSQL_DATABASE_NAME`
-`MYSQL_DATABASE_USER`
-`MYSQL_DATABASE_PASSWORD`
-`MYSQL_DATABASE_HOST`
-`S3_KEY`
-`S3_SECRET`
-`S3_REGION`
-`S3_BUCKETNAME`
-`S3_PREFIX`
-`S3_CNAME`
+* `MYSQL_DATABASE_NAME`
+* `MYSQL_DATABASE_USER`
+* `MYSQL_DATABASE_PASSWORD`
+* `MYSQL_DATABASE_HOST`
+* `S3_KEY`
+* `S3_SECRET`
+* `S3_REGION`
+* `S3_BUCKETNAME`
+* `S3_PREFIX`
 
 
 Create remote for site to push to: `deis create [sitename]`
 
-Set environment variables: `deis config:push`
+Push environment variables: `deis config:push`
 
 Initialize site: `./init.sh deploy [branch]`
 
@@ -38,16 +34,3 @@ Go to your site: `deis open`
 After running the init.sh script to initialize, all future deploys will use
 
 `git push deis [branch]`
-
-Sync config from local to remote with Drupal's Configuration Synchronization
-
-=======
-```
-git clone https://github.com/poetic/drupal-project.git SITE_NAME
-```
-
-Then after cd in to the new site directory and run: 
-```
-composer install
-```
-
