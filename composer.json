@@ -40,6 +40,7 @@
     "poetic/clutch": "dev-features/proposal-v2",
     "aws/aws-sdk-php": "3.*",
     "wa72/htmlpagedom": "^1.2",
+    "vlucas/phpdotenv": "v2.2.*",
     "drupal/admin_toolbar": "8.1.14",
     "drupal/bg_image_formatter": "8.1.x-dev",
     "drupal/coffee": "8.1.0-beta1",

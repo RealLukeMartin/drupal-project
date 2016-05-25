@@ -1,5 +1,7 @@
 <?php
 
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
 $databases['default']['default'] = array (
   'database' => $_ENV["MYSQL_DATABASE_NAME"],
   'username' => $_ENV["MYSQL_DATABASE_USER"],
@@ -41,7 +43,6 @@ $schemes = [
 
       'prefix' => $_ENV["S3_PREFIX"],  // Directory prefix for all uploaded/viewed files.
 
-      'cname' => $_ENV["S3_CNAME"],   // A cname that resolves to your bucket. Used for URL generation.
     ],
 
     'cache' => TRUE, // Creates a metadata cache to speed up lookups.

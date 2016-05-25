@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ "$1" = "deploy" ]; then
   # Proof of concept for local to prod deploys, assumes deis remote already added and environment vars already set,
-  # Only run this to get site up to cluster initially, after the intial deploy just run "git push deis master" 
+  # Only run this to get site up to cluster initially, after the intial deploy just run "git push deis master"
   git checkout $2
   chmod -R 775 ./web/sites/default/
   cp ./settings/prod.settings.local.php ./web/sites/default/settings.local.php
@@ -17,11 +17,8 @@ if [ "$1" = "deploy" ]; then
   kubectl exec mysql -i -- mysql -u $MYSQL_DATABASE_USER -p$MYSQL_DATABASE_PASSWORD -h $MYSQL_DATABASE_HOST --execute="CREATE DATABASE $MYSQL_DATABASE_NAME;"
   kubectl exec mysql -i -- mysql -u $MYSQL_DATABASE_USER -p$MYSQL_DATABASE_PASSWORD -h $MYSQL_DATABASE_HOST $MYSQL_DATABASE_NAME < $MYSQL_DATABASE_NAME.sql
   rm $MYSQL_DATABASE_NAME.sql
-else 
+else
   composer install
   composer update
-  cp ./settings/local.settings.local.php ./web/sites/default/settings.local.php
-  cp ./settings/example.settings.php ./web/sites/default/settings.php
-  chmod 644 ./web/sites/default/settings.php
 
 fi

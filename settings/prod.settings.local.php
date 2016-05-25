@@ -41,7 +41,6 @@ $schemes = [
 
       'prefix' => $_ENV["S3_PREFIX"],  // Directory prefix for all uploaded/viewed files.
 
-      'cname' => $_ENV["S3_CNAME"],   // A cname that resolves to your bucket. Used for URL generation.
     ],
 
     'cache' => TRUE, // Creates a metadata cache to speed up lookups.
