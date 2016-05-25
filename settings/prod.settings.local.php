@@ -11,8 +11,7 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'houston';
-$config['awssdk2_access_key'] = $_ENV["S3_KEY"];
-$config['awssdk2_secret_key'] = $_ENV["S3_SECRET"];
+
 $schemes = [
   'localfs' => [ // The name of the stream wrapper. localfs://
 
